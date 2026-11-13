@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
+  <title>ALIZZA CHU — Web3 Community Lead · The Mutual</title>
+  <meta
+    name="description"
+    content="Alizza Chu — Web3 Community Lead, Ecosystem Builder, and Co-Founder of The Mutual Thailand. Chase Alpha & Share The Vibe."
+  >
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2306040a' stroke='%23ff1fa8' stroke-width='3'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' fill='%23f5f5fa' font-family='sans-serif' font-weight='700' font-size='26'%3EAC%3C/text%3E%3C/svg%3E"
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link visually-hidden">Skip to main content</a>
+
+  <!-- Scroll Progress Laser -->
+  <div class="scroll-laser" id="scroll-laser" aria-hidden="true"></div>
+
+  <!-- Living Atmospheric Plasma Aurora -->
+  <div class="aurora-field" aria-hidden="true">
+    <div class="aurora-orb aurora-orb-1"></div>
+    <div class="aurora-orb aurora-orb-2"></div>
+  </div>
+
+  <!-- Interactive Wave, Constellation & Shockwave Canvas -->
+  <canvas id="neural-canvas" class="neural-canvas" aria-hidden="true"></canvas>
+
+  <!-- Spring-Lerped Kinetic Cursor Ring & Spotlight -->
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"></div>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="site-logo" href="#top" aria-label="Alizza Chu home">
+        <span class="logo-m" aria-hidden="true">
+          <svg viewBox="0 0 36 32" width="26" height="22" fill="none">
+            <defs>
+              <linearGradient id="chrome-logo" x1="0" y1="0" x2="36" y2="32" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="48%" stop-color="#a6a9ba"/>
+                <stop offset="100%" stop-color="#f7e4f2"/>
+              </linearGradient>
+            </defs>
+            <path d="M2 30V11l6 6v13H2ZM2 2l16 15L34 2v28h-6V14l-10 9.5L8 14 2 2Z" fill="url(#chrome-logo)"/>
+          </svg>
+        </span>
+        <span class="logo-text-group">
+          <span class="logo-text">ALIZZA CHU</span>
+          <span class="logo-sub">THE MUTUAL</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button
+          class="menu-button"
+          type="button"
+          popovertarget="site-menu"
+          popovertargetaction="toggle"
+          aria-controls="site-menu"
+          aria-expanded="false"
+        >
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <line x1="4" y1="7" x2="20" y2="7"></line>
+            <line x1="4" y1="12" x2="20" y2="12"></line>
+            <line x1="4" y1="17" x2="20" y2="17"></line>
+          </svg>
+          <span>Menu</span>
+        </button>
+
+        <ul id="site-menu" class="site-menu" popover="auto">
+          <li><a href="#story" data-nav-link>Vision</a></li>
+          <li><a href="#experience" data-nav-link>Experience</a></li>
+          <li><a href="#expertise" data-nav-link>Expertise</a></li>
+          <li><a href="#affiliations" data-nav-link>Network</a></li>
+          <li><a href="#connect" data-nav-link>Connect</a></li>
+          <li class="menu-utility">
+            <button type="button" class="motion-toggle" id="motion-toggle">
+              <span class="motion-dot" aria-hidden="true"></span>
+              <span id="motion-toggle-label">Pause motion</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <!-- IMMERSIVE HERO STAGE -->
+    <section id="top" class="hero">
+      <svg class="hero-lasers" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="laser-pink" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ff1fa8" stop-opacity="0"/>
+            <stop offset="50%" stop-color="#ff2ec4" stop-opacity="0.95"/>
+            <stop offset="100%" stop-color="#ff1fa8" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <path class="laser-stroke laser-flow" d="M-40 160 L210 20 L1240 20 L1480 180" stroke="url(#laser-pink)" stroke-width="1.6" fill="none"/>
+        <path class="laser-stroke laser-flow-alt" d="M-40 720 L420 560 L1480 860" stroke="url(#laser-pink)" stroke-width="1.5" fill="none"/>
+        <path class="laser-stroke" d="M880 -20 L1460 440" stroke="#ff1fa8" stroke-opacity="0.4" stroke-width="1.2" fill="none"/>
+      </svg>
+
+      <div class="container hero-stage">
+        <div class="hero-copy">
+          <div class="hud-bar">
+            <span class="hud-pill">
+              <span class="pulse-led" aria-hidden="true"></span>
+              <span>WEB3 NODE · ACTIVE SINCE 2022</span>
+            </span>
+            <span class="hud-coord">13.7563° N · 100.5018° E · BANGKOK</span>
+          </div>
+
+          <div class="brand-lockup">
+            <span class="mutual-emblem" aria-hidden="true">
+              <svg viewBox="0 0 84 64" width="54" height="42" fill="none">
+                <defs>
+                  <linearGradient id="chrome-m-hero" x1="0" y1="0" x2="84" y2="64" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="35%" stop-color="#d5d7e3"/>
+                    <stop offset="65%" stop-color="#7c7f94"/>
+                    <stop offset="100%" stop-color="#ffd9f0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M4 60V24l13 13v23H4ZM4 4l38 35L80 4v56H67V29L42 52 17 29 4 4Z" fill="url(#chrome-m-hero)"/>
+              </svg>
+            </span>
+            <div>
+              <p class="mutual-wordmark">THE MUTUAL</p>
+              <p class="mutual-tagline">CHASE ALPHA AND SHARE THE VIBE</p>
+            </div>
+          </div>
+
+          <h1 class="hero-title chrome-shimmer">ALIZZA CHU</h1>
+
+          <div class="hero-roles" aria-label="Core roles">
+            <button type="button" class="role-pill is-active" data-role-preview="lead">WEB3 COMMUNITY LEAD</button>
+            <span class="role-sep" aria-hidden="true">/</span>
+            <button type="button" class="role-pill" data-role-preview="builder">ECOSYSTEM BUILDER</button>
+            <span class="role-sep" aria-hidden="true">/</span>
+            <button type="button" class="role-pill" data-role-preview="founder">CO-FOUNDER</button>
+          </div>
+
+          <p class="hero-lead" id="hero-dynamic-lead">
+            Connecting global Web3 innovation with Thailand’s builders, founders, and local communities — forging high-signal networks across <span class="neon-accent">Web3, AI &amp; Avalanche</span>.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn-laser btn-laser-primary magnetic" href="https://t.me/alizzachu" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+              <span>Telegram · t.me/alizzachu</span>
+            </a>
+
+            <a class="btn-laser btn-laser-glass magnetic" href="https://x.com/avarinjung" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+              </svg>
+              <span>X · @avarinjung</span>
+            </a>
+
+            <button type="button" class="btn-laser btn-laser-outline magnetic" id="open-connect-dialog">
+              <span>Speaker Bio &amp; Handles</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3D Chamfered Portrait Rig with Floating Orbital Badges & Racing Laser Border -->
+        <div class="hero-visual">
+          <div class="hero-orbit-badges" aria-hidden="true">
+            <span class="float-chip float-chip-1">THE MUTUAL TH</span>
+            <span class="float-chip float-chip-2">TEAM1 × AVALANCHE</span>
+            <span class="float-chip float-chip-3">YAPPER CLUB</span>
+          </div>
+
+          <div class="portrait-rig tilt-card" data-tilt-intensity="12">
+            <!-- Racing SVG Laser Perimeter -->
+            <svg class="laser-tracer" viewBox="0 0 400 416" preserveAspectRatio="none" aria-hidden="true">
+              <polygon
+                class="laser-tracer-path"
+                points="28,2 398,2 398,388 372,414 2,414 2,28"
+                fill="none"
+                stroke="#ff2ec4"
+                stroke-width="2.5"
+              />
+            </svg>
+
+            <div class="portrait-frame">
+              <img
+                src="assets/alizza-hero.jpg"
+                alt="Alizza Chu standing beside a brushed-silver The Mutual M emblem framed by neon magenta laser lines"
+                width="1024"
+                height="1024"
+                fetchpriority="high"
+              >
+              <div class="portrait-glare" aria-hidden="true"></div>
+              <div class="portrait-hud-overlay">
+                <div class="hud-corner-badge">
+                  <span class="hud-label">FOUNDER SIGNAL</span>
+                  <span class="hud-value">THE MUTUAL · TEAM1 TH</span>
+                </div>
+                <button type="button" class="hud-copy-mini" data-copy="https://t.me/alizzachu" data-label="Telegram link">
+                  <span>t.me/alizzachu</span>
+                  <span class="copy-pill">COPY</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#story" class="scroll-cue" aria-label="Scroll to vision and summary">
+        <span>EXPLORE ECOSYSTEM</span>
+        <span class="scroll-cue-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- DUAL COUNTER-FLOWING KINETIC MARQUEE -->
+    <div class="marquee-band" aria-hidden="true">
+      <div class="marquee-track marquee-track-forward">
+        <span>THE MUTUAL THAILAND</span>
+        <span class="m-star">✦</span>
+        <span>CHASE ALPHA AND SHARE THE VIBE</span>
+        <span class="m-star">✦</span>
+        <span>TEAM1 THAILAND × AVALANCHE</span>
+        <span class="m-star">✦</span>
+        <span>YAPPER CLUB</span>
+        <span class="m-star">✦</span>
+        <span>RIALO COMMUNITY</span>
+        <span class="m-star">✦</span>
+        <span>BANGKOK → GLOBAL WEB3</span>
+        <span class="m-star">✦</span>
+        <span>THE MUTUAL THAILAND</span>
+        <span class="m-star">✦</span>
+        <span>CHASE ALPHA AND SHARE THE VIBE</span>
+        <span class="m-star">✦</span>
+        <span>TEAM1 THAILAND × AVALANCHE</span>
+        <span class="m-star">✦</span>
+        <span>YAPPER CLUB</span>
+        <span class="m-star">✦</span>
+        <span>RIALO COMMUNITY</span>
+        <span class="m-star">✦</span>
+        <span>BANGKOK → GLOBAL WEB3</span>
+      </div>
+      <div class="marquee-track marquee-track-reverse">
+        <span>COMMUNITY BUILDING</span>
+        <span class="m-star">·</span>
+        <span>ECOSYSTEM GROWTH</span>
+        <span class="m-star">·</span>
+        <span>STRATEGIC NETWORKING</span>
+        <span class="m-star">·</span>
+        <span>X SPACES &amp; EVENTS</span>
+        <span class="m-star">·</span>
+        <span>FOUNDER &amp; BUILDER RELATIONS</span>
+        <span class="m-star">·</span>
+        <span>THAI MARKET ENGAGEMENT</span>
+        <span class="m-star">·</span>
+        <span>COMMUNITY BUILDING</span>
+        <span class="m-star">·</span>
+        <span>ECOSYSTEM GROWTH</span>
+        <span class="m-star">·</span>
+        <span>STRATEGIC NETWORKING</span>
+        <span class="m-star">·</span>
+        <span>X SPACES &amp; EVENTS</span>
+        <span class="m-star">·</span>
+        <span>FOUNDER &amp; BUILDER RELATIONS</span>
+        <span class="m-star">·</span>
+        <span>THAI MARKET ENGAGEMENT</span>
+      </div>
+    </div>
+
+    <!-- SECTION 01: SCROLLYTELLING PARALLAX SUMMARY & MISSION -->
+    <section id="story" class="section story-section">
+      <div class="container story-grid parallax-wrapper">
+        <div class="story-media parallax-layer">
+          <div class="editorial-frame tilt-card spotlight-card" data-tilt-intensity="9">
+            <img
+              src="assets/alizza-editorial.jpg"
+              alt="Alizza Chu seated in editorial lighting next to laptop and coffee cup bearing The Mutual emblem"
+              width="1024"
+              height="1024"
+              loading="lazy"
+            >
+            <div class="portrait-glare" aria-hidden="true"></div>
+            <div class="editorial-caption">
+              <span class="caption-tag">BANGKOK · THAILAND</span>
+              <span>Active Builder Since 2022</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-content parallax-layer">
+          <div class="glass-panel panel-chamfer spotlight-card reveal">
+            <p class="section-kicker">01 // PROFESSIONAL SUMMARY</p>
+            <h2 class="section-title chrome-shimmer">Building the bridge between global Web3 &amp; Thailand.</h2>
+            <p class="story-text">
+              Web3 community builder and ecosystem connector active in Thailand since 2022. Co-Founder of The Mutual Thailand and Team1 Thailand Collaborator, focused on community development, content creation, strategic networking, and connecting founders, builders, and projects with local communities.
+            </p>
+          </div>
+
+          <div class="glass-panel panel-neon spotlight-card reveal">
+            <p class="section-kicker">MISSION DIRECTIVE</p>
+            <blockquote class="mission-quote">
+              “Bridge global Web3 innovation with the Thai community by connecting people, empowering builders, and creating opportunities for meaningful ecosystem growth.”
+            </blockquote>
+            <div class="mission-footer">
+              <span class="mission-spark">Let’s build, connect, and grow together.</span>
+              <span class="vibe-badge">CHASE ALPHA · SHARE THE VIBE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 02: INTERACTIVE 3D EXPERIENCE DECK & LIVE SIGNAL INSPECTOR -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker">02 // PROFESSIONAL EXPERIENCE</p>
+            <h2 class="section-title chrome-shimmer">Ecosystem Leadership &amp; Roles</h2>
+          </div>
+          <p class="section-sub">
+            Click any role card to inspect its live signal, or filter via the capability matrix below to cross-illuminate tracks.
+          </p>
+        </div>
+
+        <div class="experience-stage">
+          <div class="exp-deck" id="exp-deck">
+            <article
+              class="exp-card tilt-card spotlight-card is-selected reveal"
+              tabindex="0"
+              data-role-id="mutual"
+              data-tags="strategic-networking founder-relations community-building cross-community"
+            >
+              <div class="card-laser-line" aria-hidden="true"></div>
+              <div class="exp-meta">
+                <span class="exp-badge">CO-FOUNDER</span>
+                <span class="exp-org">The Mutual Thailand</span>
+              </div>
+              <h3 class="exp-title">Co-Founder | The Mutual Thailand</h3>
+              <ul class="exp-bullets">
+                <li>Co-founded a community connecting people across Web3, AI, and business.</li>
+                <li>Build relationships among founders, entrepreneurs, builders, and industry professionals; foster networking and collaboration.</li>
+              </ul>
+              <div class="exp-footer">
+                <span>Web3 × AI × Business</span>
+                <span>Founder Relations</span>
+              </div>
+            </article>
+
+            <article
+              class="exp-card tilt-card spotlight-card reveal"
+              tabindex="0"
+              data-role-id="team1"
+              data-tags="ecosystem-growth thai-market cross-community x-spaces"
+            >
+              <div class="card-laser-line" aria-hidden="true"></div>
+              <div class="exp-meta">
+                <span class="exp-badge">COLLABORATOR</span>
+                <span class="exp-org">Avalanche Ecosystem</span>
+              </div>
+              <h3 class="exp-title">Team1 Thailand Collaborator | Avalanche Ecosystem</h3>
+              <ul class="exp-bullets">
+                <li>Support Avalanche ecosystem visibility, engagement, and community development in Thailand.</li>
+                <li>Connect international Web3 projects with Thai builders, creators, and communities through content, discussions, and events.</li>
+              </ul>
+              <div class="exp-footer">
+                <span>Avalanche</span>
+                <span>Thailand Growth</span>
+              </div>
+            </article>
+
+            <article
+              class="exp-card tilt-card spotlight-card reveal"
+              tabindex="0"
+              data-role-id="yapper"
+              data-tags="content-strategy community-building x-spaces"
+            >
+              <div class="card-laser-line" aria-hidden="true"></div>
+              <div class="exp-meta">
+                <span class="exp-badge">OWNER</span>
+                <span class="exp-org">Yapper Club</span>
+              </div>
+              <h3 class="exp-title">Owner | Yapper Club</h3>
+              <ul class="exp-bullets">
+                <li>Develop community-driven Web3 content and conversations; encourage participation and knowledge sharing.</li>
+              </ul>
+              <div class="exp-footer">
+                <span>Community Voice</span>
+                <span>Knowledge Sharing</span>
+              </div>
+            </article>
+
+            <article
+              class="exp-card tilt-card spotlight-card reveal"
+              tabindex="0"
+              data-role-id="builder"
+              data-tags="content-strategy thai-market x-spaces ecosystem-growth"
+            >
+              <div class="card-laser-line" aria-hidden="true"></div>
+              <div class="exp-meta">
+                <span class="exp-badge">2022–PRESENT</span>
+                <span class="exp-org">Independent &amp; Ecosystem</span>
+              </div>
+              <h3 class="exp-title">Web3 Community Builder &amp; Content Creator</h3>
+              <ul class="exp-bullets">
+                <li>Create accessible Thai-language content about blockchain, crypto, DeFi, and emerging Web3 ecosystems.</li>
+                <li>Support online discussions, educational initiatives, and connections between local audiences and global projects.</li>
+              </ul>
+              <div class="exp-footer">
+                <span>Thai Education</span>
+                <span>DeFi &amp; Emerging Web3</span>
+              </div>
+            </article>
+          </div>
+
+          <!-- Live Role Signal Inspector (Scoped View Transition Root) -->
+          <aside class="signal-inspector glass-panel panel-chamfer spotlight-card" aria-live="polite" id="signal-inspector">
+            <div class="inspector-head">
+              <span class="inspector-kicker">LIVE ROLE SIGNAL</span>
+              <span class="inspector-pulse" aria-hidden="true"></span>
+            </div>
+            <div class="inspector-body" id="inspector-body">
+              <h3 class="inspector-title" id="inspector-title">Co-Founder | The Mutual Thailand</h3>
+              <p class="inspector-summary" id="inspector-summary">
+                High-trust community architecture uniting founders, builders, AI innovators, and business leaders in Thailand.
+              </p>
+              <div class="inspector-pillars">
+                <span class="pillars-label">ACTIVE CAPABILITIES</span>
+                <ul class="pillars-list" id="inspector-pillars">
+                  <li>Strategic Networking</li>
+                  <li>Founder &amp; Builder Relations</li>
+                  <li>Community Building &amp; Engagement</li>
+                  <li>Cross-Community Collaboration</li>
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 03: CORE EXPERTISE INTERACTIVE MATRIX -->
+    <section id="expertise" class="section expertise-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker">03 // CORE EXPERTISE</p>
+            <h2 class="section-title chrome-shimmer">Interactive Capability Matrix</h2>
+          </div>
+          <p class="section-sub">
+            Select any capability node to spotlight matching experience tracks and synchronize the Live Role Signal.
+          </p>
+        </div>
+
+        <div class="expertise-matrix" role="group" aria-label="Filter experience by core expertise">
+          <button type="button" class="exp-node magnetic is-active" data-filter="all" aria-pressed="true">
+            <span class="node-code">00</span>
+            <span>All Capabilities</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="community-building" aria-pressed="false">
+            <span class="node-code">01</span>
+            <span>Community Building &amp; Engagement</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="ecosystem-growth" aria-pressed="false">
+            <span class="node-code">02</span>
+            <span>Ecosystem Growth</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="strategic-networking" aria-pressed="false">
+            <span class="node-code">03</span>
+            <span>Strategic Networking</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="content-strategy" aria-pressed="false">
+            <span class="node-code">04</span>
+            <span>Content Strategy</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="x-spaces" aria-pressed="false">
+            <span class="node-code">05</span>
+            <span>X Spaces &amp; Community Events</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="founder-relations" aria-pressed="false">
+            <span class="node-code">06</span>
+            <span>Founder &amp; Builder Relations</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="thai-market" aria-pressed="false">
+            <span class="node-code">07</span>
+            <span>Thai Market Engagement</span>
+          </button>
+          <button type="button" class="exp-node magnetic" data-filter="cross-community" aria-pressed="false">
+            <span class="node-code">08</span>
+            <span>Cross-Community Collaboration</span>
+          </button>
+        </div>
+
+        <p class="filter-status" id="filter-status" aria-live="polite">
+          All 4 leadership &amp; ecosystem roles active.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 04: INTERACTIVE ECOSYSTEM ORBIT & AFFILIATIONS -->
+    <section id="affiliations" class="section network-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <p class="section-kicker">04 // COMMUNITY AFFILIATIONS</p>
+            <h2 class="section-title chrome-shimmer">Interactive Ecosystem Orbit</h2>
+          </div>
+          <p class="section-sub">
+            Select any orbiting node or affiliation card to lock the laser link and explore Alizza’s ecosystem footprint.
+          </p>
+        </div>
+
+        <div class="network-stage">
+          <div class="orbit-interactive-stage" id="orbit-stage">
+            <div class="orbit-rings" aria-hidden="true">
+              <div class="orbit-ring-outer"></div>
+              <div class="orbit-ring-inner"></div>
+            </div>
+
+            <div class="orbit-core" aria-hidden="true">
+              <span>AC</span>
+            </div>
+
+            <div class="orbit-rotator" id="orbit-rotator">
+              <button type="button" class="orbit-sat sat-1 is-active" data-aff="team1">
+                <span>Team1 TH</span>
+              </button>
+              <button type="button" class="orbit-sat sat-2" data-aff="mutual">
+                <span>The Mutual</span>
+              </button>
+              <button type="button" class="orbit-sat sat-3" data-aff="yapper">
+                <span>Yapper Club</span>
+              </button>
+              <button type="button" class="orbit-sat sat-4" data-aff="rialo">
+                <span>Rialo</span>
+              </button>
+            </div>
+          </div>
+
+          <ul class="affiliation-cards" id="affiliation-cards">
+            <li class="affiliation-card tilt-card spotlight-card is-active reveal" data-aff="team1">
+              <button type="button" class="aff-card-trigger">
+                <span class="aff-num">NODE // 01</span>
+                <span class="aff-name">Team1 Thailand</span>
+                <span class="aff-role">Collaborator · Avalanche Ecosystem</span>
+              </button>
+            </li>
+            <li class="affiliation-card tilt-card spotlight-card reveal" data-aff="mutual">
+              <button type="button" class="aff-card-trigger">
+                <span class="aff-num">NODE // 02</span>
+                <span class="aff-name">The Mutual Thailand</span>
+                <span class="aff-role">Co-Founder · Web3, AI &amp; Business</span>
+              </button>
+            </li>
+            <li class="affiliation-card tilt-card spotlight-card reveal" data-aff="yapper">
+              <button type="button" class="aff-card-trigger">
+                <span class="aff-num">NODE // 03</span>
+                <span class="aff-name">Yapper Club</span>
+                <span class="aff-role">Owner · Community Content &amp; Discussions</span>
+              </button>
+            </li>
+            <li class="affiliation-card tilt-card spotlight-card reveal" data-aff="rialo">
+              <button type="button" class="aff-card-trigger">
+                <span class="aff-num">NODE // 04</span>
+                <span class="aff-name">Rialo</span>
+                <span class="aff-role">Community Member</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 05: LASER CONNECT PORTAL -->
+    <section id="connect" class="section connect-section">
+      <div class="container">
+        <div class="portal-box panel-chamfer spotlight-card reveal">
+          <div class="portal-glow" aria-hidden="true"></div>
+          <div class="portal-copy">
+            <p class="section-kicker">05 // INITIATE CONNECTION</p>
+            <h2 class="portal-title chrome-shimmer">Let’s build, connect, and grow together.</h2>
+            <p class="portal-desc">
+              Available for ecosystem collaborations, Thai market community launches, X Spaces, and Web3 builder initiatives.
+            </p>
+          </div>
+
+          <div class="portal-actions">
+            <a class="portal-link magnetic" href="https://t.me/alizzachu" target="_blank" rel="noopener noreferrer">
+              <div>
+                <span class="pl-kicker">TELEGRAM DIRECT</span>
+                <span class="pl-val">t.me/alizzachu</span>
+              </div>
+              <span class="pl-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <a class="portal-link magnetic" href="https://x.com/avarinjung" target="_blank" rel="noopener noreferrer">
+              <div>
+                <span class="pl-kicker">X (TWITTER)</span>
+                <span class="pl-val">@avarinjung</span>
+              </div>
+              <span class="pl-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <div class="portal-copy-row">
+              <button type="button" class="hud-copy-mini" data-copy="https://t.me/alizzachu" data-label="Telegram link">
+                <span>Copy Telegram URL</span>
+                <span class="copy-pill">COPY</span>
+              </button>
+              <button type="button" class="hud-copy-mini" data-copy="@avarinjung" data-label="X handle">
+                <span>Copy @avarinjung</span>
+                <span class="copy-pill">COPY</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 ALIZZA CHU · THE MUTUAL THAILAND · BANGKOK</p>
+      <div class="footer-links">
+        <button type="button" class="footer-btn" id="print-profile">Export PDF</button>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Speaker Bio & Direct Handles Modal -->
+  <dialog id="connect-dialog" class="connect-dialog" aria-labelledby="connect-dialog-title">
+    <div class="dialog-head">
+      <h2 id="connect-dialog-title">Alizza Chu · Quick Bio &amp; Handles</h2>
+      <button type="button" class="dialog-close" id="close-connect-dialog" aria-label="Close dialog">
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 6 6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <p class="dialog-sub">
+      Ready-to-paste speaker bio &amp; handles for X Spaces, ecosystem events, and partner introductions.
+    </p>
+
+    <div class="dialog-bio-card">
+      <p id="speaker-bio-text">
+        Alizza Chu is a Bangkok-based Web3 Community Lead, Ecosystem Builder, and Co-Founder of The Mutual Thailand, active in Thailand’s Web3 space since 2022. She collaborates with Team1 Thailand (Avalanche Ecosystem), owns Yapper Club, and bridges global Web3 projects with Thai founders, builders, and communities.
+      </p>
+      <button type="button" class="btn-laser btn-laser-primary" id="copy-bio-btn">
+        Copy Short Bio
+      </button>
+    </div>
+
+    <div class="dialog-handles">
+      <button type="button" class="hud-copy-mini" data-copy="https://t.me/alizzachu" data-label="Telegram link">
+        <span>Telegram · t.me/alizzachu</span>
+        <span class="copy-pill">COPY</span>
+      </button>
+      <button type="button" class="hud-copy-mini" data-copy="@avarinjung" data-label="X handle">
+        <span>X · @avarinjung</span>
+        <span class="copy-pill">COPY</span>
+      </button>
+    </div>
+  </dialog>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
